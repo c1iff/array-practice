@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Groceries">
+        <h1>Grocery List</h1>
+        <form id="groceries">
+          <label for="item1">Item 1</label>
+          <input type="text" id="item1" class="form-control"></input>
+          <label for="item2" >Item 2</label>
+          <input type="text" id="item2" class="form-control"></input>
+          <label for="item3" >Item 3</label>
+          <input type="text" id="item3" class="form-control"></input>
+          <label for="item4" >Item 4</label>
+          <input type="text" id="item4" class="form-control"></input>
+          <br>
+          <button type="submit" class="btn-primary btn">Submit!</button>
+        </form>
+        <div id="groceriesOutput"></output>
+      </div>
+      <div class="wordPlay">
+        <h1>Word Play</h1>
+        <form id="wordPlay">
+          <label for="sentence">Enter a sentence here:</label>
+          <input type="text" id="sentence" class="form-control"></input>
+          <br>
+          <button type="submit" class="btn-primary btn">Submit!</button>
+        </form>
+        <div id="wordOutput"></div>
+      </div>
+      <div class="cards">
+        <h1>Build a Deck</h1>
+        <form id="cards">
+          <button type="submit" class="btn-primary btn">Submit!</button>
+        </form>
+        <ul>
+
+        </ul>
+      </div>
+      <div class="wordOrder">
+        <h1>Word Order</h1>
+        <form id="wordOrder">
+          <label for="wordsToCount">Enter a words here:</label>
+          <input type="text" id="wordsToCount" class="form-control"></input>
+          <br>
+          <button type="submit" class="btn-primary btn">Submit!</button>
+        </form>
+        <div id="wordCountOutput">
+          <ul id="wordOutput">
+          </ul>
+          <ul id="numberOutput">  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

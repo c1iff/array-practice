@@ -1,0 +1,16 @@
+#groceryOutput {
+  display: none;
+}
+
+#wordOutput {
+  display: none;
+}
+
+.cards ul {
+  display: none;
+}
+
+td {
+  border: 1px solid black;
+  width: 50px;
+}
