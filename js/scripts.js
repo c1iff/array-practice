@@ -1,5 +1,6 @@
 $(function(){
 
+//grocery list function
   var groceryFunction = function(inputs) {
     var items = [];
     inputs.forEach(function(input) {
@@ -12,7 +13,7 @@ $(function(){
     return finalItem;
   }
 
-
+//Word play function take string and return all words greater than 3 letters  and reverses
   var wordFunction = function(words) {
     var wordsThree = [];
     var splitWords = words.split(" ");
@@ -28,7 +29,7 @@ $(function(){
   }
 
 
-
+//creates a deck of card and returns card type
   var cardFunction = function() {
     deckOfCards = []
     suits = ['hearts', 'clubs', 'spades', 'diamonds'];
@@ -43,25 +44,25 @@ $(function(){
   }
 
 
-//unique words
-  var uniqueWords = function(words) {
+//this function finds unique words and counts how many are there, return as arrays
+  var wordOrder = function(words) {  //input string from user
     console.log(words);
-    var splitWords = words.split(" ");
+    var splitWords = words.split(" "); //create array from string
     console.log(splitWords);
 
-    var sortedWords = splitWords.sort();
+    var sortedWords = splitWords.sort(); //sort array
     console.log(sortedWords);
 
-    var wordsNumber = [];
-    var wordsItem = [];
-    sortedWords.forEach(function(eachWord) {
-      var occurences = sortedWords.filter(function(filterWord){
+    var wordsNumber = [];  //create empty array for number of words
+    var wordsItem = [];   //create emty array for unique words
+    sortedWords.forEach(function(eachWord) {  //for each emelent in array, run a function
+      var occurences = sortedWords.filter(function(filterWord){  //for each element count occurences
         return filterWord === eachWord;
       }).length;
 
-      sortedWords.splice(0, (occurences - 1));
-      wordsNumber.push(occurences);
-      wordsItem.push(eachWord);
+      sortedWords.splice(0, (occurences - 1)); //remove duplicate elements
+      wordsNumber.push(occurences); //output number of words into array
+      wordsItem.push(eachWord);  //output unique words into array
 
     })
     console.log(wordsNumber);
@@ -95,7 +96,7 @@ $(function(){
 //word order logic
   $("#wordOrder").submit(function(event){
     event.preventDefault();
-    $("#wordCountOutput ul").append(wordOrder(($("#wordsToCount").val())));
+    $("#wordCountOutput ul").append("<li>" + wordOrder(($("#wordsToCount").val()))+ "</li>");
 
   })
 
